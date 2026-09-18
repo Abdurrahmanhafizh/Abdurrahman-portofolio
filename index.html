@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Muhammad Abdurrahman Hafizh | Backend Developer</title>
+    <meta name="description" content="Muhammad Abdurrahman Hafizh - Backend Developer dan Information Systems Student"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              retro: {
+                cream: "#F4EAE1",     /* Latar belakang utama */
+                mustard: "#E0A96D",   /* Akses sekunder / Card */
+                orange: "#D96B43",    /* Tombol aksi / CTA */
+                terracotta: "#A34828",/* Teks sekunder / Hover */
+                espresso: "#2C1D11",  /* Teks utama / Garis tepi */
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="vintage-grid-bg text-retro-espresso overflow-x-hidden">
+    <!-- ========================================================= -->
+    <!-- NAVBAR -->
+    <!-- ========================================================= -->
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 border-b border-retro-espresso/20 bg-retro-cream/90 backdrop-blur-xl transition-all duration-300 ">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo -->
+          <a href="#home" class="text-xl sm:text-2xl font-bold tracking-wider text-retro-espresso">
+            Hafizh<span class="text-retro-orange">.</span>
+          </a>
+    
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-6 lg:gap-8 font-semibold text-sm lg:text-base">
+            <a href="#home" class="nav-link active text-retro-espresso hover:text-retro-terracotta transition">Home</a>
+            <a href="#about" class="nav-link text-retro-espresso hover:text-retro-terracotta transition">About</a>
+            <a href="#showcase" class="nav-link text-retro-espresso hover:text-retro-terracotta transition">Showcase</a>
+            <a href="#contact" class="nav-link text-retro-espresso hover:text-retro-terracotta transition">Contact</a>
+          </div>
+    
+          <!-- Mobile Button -->
+          <button id="menuButton" aria-label="Toggle Navigation" class="md:hidden text-2xl text-retro-orange p-2 focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+    
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden pb-6 border-t border-retro-espresso/10 pt-4 mt-1">
+          <div class="flex flex-col gap-4 font-semibold text-center sm:text-left">
+            <a href="#home" class="nav-link text-retro-espresso hover:text-retro-orange py-1 transition">Home</a>
+            <a href="#about" class="nav-link text-retro-espresso hover:text-retro-orange py-1 transition">About</a>
+            <a href="#showcase" class="nav-link text-retro-espresso hover:text-retro-orange py-1 transition">Showcase</a>
+            <a href="#contact" class="nav-link text-retro-espresso hover:text-retro-orange py-1 transition">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========================================================= -->
+    <!-- HERO -->
+    <!-- ========================================================= -->
+
+    <section id="home" class="min-h-screen flex items-center pt-20 sm:pt-24 pb-12 relative overflow-x-clip">
+      
+      <!-- Background Decorators (Disesuaikan agar tidak memicu overflow di mobile) -->
+      <div class="absolute inset-0 cyber-grid opacity-10 pointer-events-none max-w-full"></div>
+      
+      <!-- Ubah -left-10 & -right-10 di mobile menjadi left-0 & right-0 agar tidak keluar layar -->
+      <div class="absolute w-64 h-64 sm:w-96 sm:h-96 bg-retro-mustard/40 rounded-full blur-3xl top-10 left-0 sm:-left-10 pointer-events-none"></div>
+      <div class="absolute w-64 h-64 sm:w-96 sm:h-96 bg-retro-orange/40 rounded-full blur-3xl bottom-10 right-0 sm:-right-10 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          
+          <!-- Hero Content (Teks & Tombol) -->
+          <div class="reveal text-center lg:text-left w-full">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-2 text-retro-espresso">
+              Backend
+              <span class="text-retro-orange block sm:inline">Developer</span>
+            </h1>
+
+            <h3 class="text-lg sm:text-xl md:text-2xl text-retro-terracotta mb-4 sm:mb-5 font-medium flex items-center justify-center lg:justify-start gap-1">
+              <span id="typing-text">Information Systems Student</span>
+              <span class="typing-cursor text-retro-orange font-bold">|</span>
+            </h3>
+
+            <p class="text-retro-espresso/80 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-6 sm:mb-8">
+              Membantu dan menerapkan logika bisnis ke dalam sistem untuk menciptakan solusi digital yang terstruktur, efisien, dan sesuai kebutuhan bisnis Anda.
+            </p>
+
+            <!-- Tech Stack Badges -->
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-6 sm:mb-8">
+              <span class="tech-badge rounded-full bg-retro-mustard/30 text-retro-espresso border border-retro-espresso/20 px-3 py-1 text-xs sm:text-sm font-medium flex items-center gap-1.5">
+                <i class="fa-brands fa-php text-retro-terracotta"></i> PHP
+              </span>
+              <span class="tech-badge rounded-full bg-retro-mustard/30 text-retro-espresso border border-retro-espresso/20 px-3 py-1 text-xs sm:text-sm font-medium flex items-center gap-1.5">
+                <i class="fa-brands fa-laravel text-retro-orange"></i> Laravel
+              </span>
+              <span class="tech-badge rounded-full bg-retro-mustard/30 text-retro-espresso border border-retro-espresso/20 px-3 py-1 text-xs sm:text-sm font-medium flex items-center gap-1.5">
+                <i class="fa-solid fa-wind text-retro-terracotta"></i> Tailwind
+              </span>
+              <span class="tech-badge rounded-full bg-retro-mustard/30 text-retro-espresso border border-retro-espresso/20 px-3 py-1 text-xs sm:text-sm font-medium flex items-center gap-1.5">
+                <i class="fa-solid fa-database text-retro-terracotta"></i> MySQL
+              </span>
+              <span class="tech-badge rounded-full bg-retro-mustard/30 text-retro-espresso border border-retro-espresso/20 px-3 py-1 text-xs sm:text-sm font-medium flex items-center gap-1.5">
+                <i class="fa-solid fa-database text-retro-terracotta"></i> SQLite
+              </span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 font-normal">
+
+              <a href="#showcase" class="w-full sm:w-auto text-center px-6 py-3 rounded-md hover:bg-retro-espresso hover:bg-retro-terracotta shadow-md transition duration-300 font-semibold flex items-center justify-center bg-retro-orange text-white">
+                <i class="fa-solid fa-code mr-2"></i>
+                View Projects
+              </a>
+              <a href="#contact" class="w-full sm:w-auto text-center border-2 border-retro-espresso text-retro-espresso px-6 py-3 rounded-md hover:bg-retro-espresso hover:text-retro-cream transition duration-300 font-semibold flex items-center justify-center"> 
+                <span class="mr-2">Contact Me</span> <i class="fa-regular fa-envelope"></i>
+              </a>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex items-center justify-center lg:justify-start gap-5">
+              <span class="text-retro-espresso/60 text-xs sm:text-sm font-medium">Follow me</span>
+              <a target="_blank" href="https://github.com/Abdurrahmanhafizh" class="text-retro-espresso hover:text-retro-orange text-xl transition">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a target="_blank" href="https://www.linkedin.com/in/muhammad-abdurrahman-hafizh-s-kom-363b46291/" class="text-retro-espresso hover:text-retro-orange text-xl transition">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a target="_blank" href="https://www.instagram.com/mabdurrahmanhafizh/?utm_source=ig_web_button_share_sheet" class="text-retro-espresso hover:text-retro-orange text-xl transition">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual (Lanyard ID Card) -->
+          <div class="flex justify-center reveal w-full -mt-20 sm:-mt-24 lg:mt-0 pt-16 sm:pt-20 lg:pt-0">
+            <div class="lanyard-container relative z-20 scale-85 sm:scale-100 origin-top">
+              <div class="lanyard-strap">
+                <span class="lanyard-text">BACKEND DEVELOPER • LARAVEL • PHP •</span>
+              </div>
+              <div class="lanyard-clip"></div>
+              <div class="lanyard-card w-[280px] sm:w-[320px]">
+                <div class="card-hole"></div>
+                <div class="lanyard-header flex items-center justify-between border-b-2 border-[#2C1D11] pb-3 mb-4">
+                  <div>
+                    <span class="text-[10px] font-bold tracking-widest text-[#A34828] uppercase block">Dev Pass / 2026</span>
+                    <h4 class="font-extrabold text-[#2C1D11] text-xs sm:text-sm tracking-wider">M. ABDURRAHMAN HAFIZH</h4>
+                  </div>
+                  <span class="px-2 py-1 bg-[#D96B43] text-[#F4EAE1] text-[9px] font-bold uppercase rounded border border-[#2C1D11]">
+                    VERIFIED
+                  </span>
+                </div>
+                <div class="lanyard-body space-y-3 font-mono text-xs text-[#2C1D11]">
+                  <div class="flex items-center gap-3 bg-[#F4EAE1] p-2.5 rounded border border-[#2C1D11]">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded border-2 border-[#2C1D11] bg-[#E0A96D] flex items-center justify-center text-[#A34828] font-bold text-lg shadow-sm shrink-0">
+                      <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div>
+                      <p class="text-[10px] font-bold text-[#A34828] uppercase tracking-wide">ROLE</p>
+                      <p class="font-extrabold text-[#2C1D11] text-xs sm:text-sm">Backend Specialist</p>
+                      <p class="text-[10px] text-[#2C1D11]/70 mt-0.5">ID: #8942-DEV-2026</p>
+                    </div>
+                  </div>
+                  <div class="bg-[#F4EAE1] p-2.5 rounded border border-[#2C1D11] space-y-1.5 text-[11px]">
+                    <div class="flex justify-between border-b border-[#2C1D11]/20 pb-1">
+                      <span class="font-bold text-[#A34828]">Core Tech:</span>
+                      <span class="font-semibold">PHP / Laravel</span>
+                    </div>
+                    <div class="flex justify-between border-b border-[#2C1D11]/20 pb-1">
+                      <span class="font-bold text-[#A34828]">Database:</span>
+                      <span class="font-semibold">MySQL / SQLite</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="font-bold text-[#A34828]">Status:</span>
+                      <span class="text-[#D96B43] font-bold">● Available for Work</span>
+                    </div>
+                  </div>
+                  <div class="pt-1 flex flex-col items-center justify-center">
+                    <div class="w-full h-7 bg-current opacity-80 flex justify-between px-1 items-center">
+                      <div class="w-1 h-full bg-[#2C1D11]"></div>
+                      <div class="w-2 h-full bg-[#2C1D11]"></div>
+                      <div class="w-0.5 h-full bg-[#2C1D11]"></div>
+                      <div class="w-3 h-full bg-[#2C1D11]"></div>
+                      <div class="w-1 h-full bg-[#2C1D11]"></div>
+                      <div class="w-2 h-full bg-[#2C1D11]"></div>
+                      <div class="w-0.5 h-full bg-[#2C1D11]"></div>
+                      <div class="w-2.5 h-full bg-[#2C1D11]"></div>
+                      <div class="w-1 h-full bg-[#2C1D11]"></div>
+                      <div class="w-3 h-full bg-[#2C1D11]"></div>
+                      <div class="w-0.5 h-full bg-[#2C1D11]"></div>
+                      <div class="w-2 h-full bg-[#2C1D11]"></div>
+                    </div>
+                    <span class="text-[8px] font-mono tracking-widest text-[#2C1D11]/70 mt-1">SYS-INFO-PASSPORT-2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- ABOUT -->
+    <!-- ========================================================= -->
+
+    <section id="about" class="py-12 smb-y-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Heading (About Me) -->
+        <div class="section-heading reveal reveal-up text-center mb-8 lg:mb-12">
+          <h3 class="text-3xl sm:text-4xl lg:text-5xl text-retro-terracotta font-extrabold tracking-wider">
+            About Me
+          </h3>
+        </div>
+    
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <!-- Gambar (Muncul dari KANAN ke KIRI) -->
+          <div class="flex justify-center lg:justify-end items-start reveal-left order-1 lg:order-2">
+            <div class="photo-wrapper relative w-48 h-48 sm:w-60 sm:h-60 lg:w-[320px] lg:h-[320px] xl:w-[360px] xl:h-[360px] aspect-square rounded-full shrink-0">
+              <img src="img/FDL06642.JPG" alt="Muhammad Abdurrahman Hafizh" class="w-full h-full object-cover rounded-full">
+            </div>
+          </div>
+        
+          <!-- Teks Deskripsi (Muncul dari KIRI ke KANAN) -->
+          <div class="relative reveal reveal-right order-2 lg:order-1 text-center lg:text-left">
+            <!-- Hiasan Blur Background -->
+            <div class="absolute -z-10 w-64 h-64 sm:w-96 sm:h-96 bg-retro-mustard/10 rounded-full blur-3xl -top-10 -left-10 pointer-events-none"></div>
+        
+            <!-- Nama/Greeting -->
+            <div class="mb-6">
+              <h4 class="text-xl sm:text-2xl lg:text-3xl text-retro-espresso leading-none">
+                Hello, I'm
+              </h4>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-retro-orange mt-2">
+                Muhammad Abdurrahman Hafizh
+              </h2>
+            </div>
+        
+            <p class="text-retro-espresso/80 leading-relaxed text-base sm:text-lg mb-4 sm:mb-6 text-justify">
+            saya seorang Backend Developer yang memiliki ketertarikan pada pengembangan sistem. Saya berfokus pada pengimplementasian ide bisnis kedalam sistem digital yang terstruktur dan fungsional. 
+            </p>
+        
+            <!-- Motto -->
+            <div class="motto-card mb-6 sm:mb-8 p-4 sm:p-6 bg-retro-mustard/20 border-l-4 border-retro-orange rounded-r-lg text-left">
+              <p class="text-base sm:text-lg font-normal text-retro-espresso italic">
+                <span class="text-retro-orange font-bold text-lg sm:text-xl">"</span> Build with logic,
+                <span class="text-retro-terracotta font-semibold"> solve with technology.</span> 
+                <span class="text-retro-orange font-bold text-lg sm:text-xl">"</span>
+              </p>
+            </div>
+        
+            <!-- Download CV Button -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 font-normal">
+              <a href="https://drive.google.com/file/d/18DBlWWP6qIISHJ_rbx1RPoDolsEKUQW7/view?usp=sharing" class="w-full sm:w-auto text-center text-retro-cream px-6 py-3 rounded-md bg-retro-espresso font-semibold flex items-center justify-center">
+                <i class="fa-solid fa-file-arrow-down mr-2"></i>
+                Download CV
+              </a>
+              <a href="pendidikan.html" class="w-full sm:w-auto text-center text-retro-cream px-6 py-3 rounded-md bg-retro-orange font-semibold flex items-center justify-center"> 
+                <span class="mr-2">Pendidikan</span> 
+                <i class="fa-solid fa-graduation-cap"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- STATISTICS -->
+    <!-- ========================================================= -->
+
+    <section class="py-12 sm:py-16 lg:py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          
+          <!-- Project -->
+          <a href="#showcase" class="stat-card reveal rounded-2xl bg-retro-mustard/30 border border-retro-espresso/10 p-5 sm:p-6 flex items-center gap-4 sm:gap-6 shadow-sm hover:border-retro-orange transition duration-300">
+            <div class="bg-retro-orange/20 text-retro-orange w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-code text-xl sm:text-2xl lg:text-3xl"></i>
+            </div>
+            <div>
+              <span class="counter text-3xl sm:text-4xl font-bold text-retro-espresso" data-target="4"> 0 </span>
+              <p class="text-retro-terracotta font-medium text-sm sm:text-base mt-0.5 sm:mt-1">Completed Projects</p>
+            </div>
+          </a>
+    
+          <!-- Certificate -->
+          <a href="#showcase" class="stat-card reveal rounded-2xl bg-retro-mustard/30 border border-retro-espresso/10 p-5 sm:p-6 flex items-center gap-4 sm:gap-6 shadow-sm hover:border-retro-orange transition duration-300">
+            <div class="bg-retro-orange/20 text-retro-orange w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-award text-xl sm:text-2xl lg:text-3xl"></i>  
+            </div>
+            <div>
+              <span class="counter text-3xl sm:text-4xl font-bold text-retro-espresso" data-target="10"> 0 </span>
+              <p class="text-retro-terracotta font-medium text-sm sm:text-base mt-0.5 sm:mt-1">Certificates</p>
+            </div>
+          </a>
+    
+          <!-- Experience -->
+          <a href="#showcase" class="stat-card reveal rounded-2xl bg-retro-mustard/30 border border-retro-espresso/10 p-5 sm:p-6 flex items-center gap-4 sm:gap-6 shadow-sm hover:border-retro-orange transition duration-300 sm:col-span-2 lg:col-span-1">
+            <div class="bg-retro-orange/20 text-retro-orange w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center shrink-0">    
+              <i class="fa-regular fa-calendar-days text-xl sm:text-2xl lg:text-3xl"></i>
+            </div>
+            <div>
+              <span class="counter text-3xl sm:text-4xl font-bold text-retro-espresso" data-target="5"> 0 </span>
+              <p class="text-retro-terracotta font-medium text-sm sm:text-base mt-0.5 sm:mt-1">Years Experience</p>
+            </div>
+          </a>
+    
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SHOWCASE -->
+    <!-- ========================================================= -->
+
+    <section id="showcase" class="py-16 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-heading reveal">
+          <h3 class="text-3xl text-center sm:text-4xl lg:text-5xl text-retro-terracotta font-extrabold tracking-wider">Showcase</h3>
+        </div>
+    
+        <!-- Tabs -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 mt-8 sm:mt-12 mb-8 sm:mb-12 p-2 sm:p-3 rounded-xl sm:rounded-lg border-2 border-retro-espresso/20 bg-retro-mustard/20">
+          <button class="tab-button active rounded-md py-2.5 sm:py-4 text-base sm:text-xl font-semibold text-retro-espresso hover:bg-retro-orange hover:text-white transition flex items-center justify-center" data-tab="projects">
+            <i class="fa-solid fa-code mr-2 text-sm sm:text-base"></i>
+            Projects
+          </button>
+          <button class="tab-button rounded-md py-2.5 sm:py-4 text-base sm:text-xl font-semibold text-retro-espresso hover:bg-retro-orange hover:text-white transition flex items-center justify-center" data-tab="certificates">
+            <i class="fa-solid fa-award mr-2 text-sm sm:text-base"></i>
+            Certificates
+          </button>
+          <button class="tab-button rounded-md py-2.5 sm:py-4 text-base sm:text-xl font-semibold text-retro-espresso hover:bg-retro-orange hover:text-white transition flex items-center justify-center" data-tab="stack">
+            <i class="fa-solid fa-cubes mr-2 text-sm sm:text-base"></i>Tech Stack
+          </button>
+        </div>
+    
+        <!-- PROJECTS -->
+        <div id="projects" class="tab-content active">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <!-- Project 1 (Tampil Awal) -->
+            <div class="project-card reveal bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm">
+              
+              <!-- BAGIAN FOTO PROJECT -->
+              <div class="project-image bg-retro-mustard/40 h-48 sm:h-56 w-full overflow-hidden relative">
+                <img src="img/foto-project/foto_1.png" alt="Sistem Informasi Manajemen Distribusi Listrik" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" loading="lazy"/>
+              </div>
+            
+              <div class="p-5 sm:p-6">
+                <div class="flex flex-wrap gap-2 mb-3 sm:mb-4">
+                  <span class="project-tag bg-retro-orange/10 text-retro-orange border border-retro-orange/20 px-3 py-1 rounded-full text-xs font-semibold">Laravel</span>
+                  <span class="project-tag bg-retro-terracotta/10 text-retro-terracotta border border-retro-terracotta/20 px-3 py-1 rounded-full text-xs font-semibold">MySQL</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 text-retro-espresso">Sistem Informasi Manajemen Distribusi Listrik</h3>
+                <p class="text-sm sm:text-base text-retro-espresso/80 leading-relaxed mb-6">Sistem untuk membantu pengelolaan distribusi listrik, data penyulang, LBS, serta informasi arus beban secara terintegrasi.</p>
+                <div class="flex gap-3 items-center">
+                  <a href="https://youtube.com/@muhammadabdurrahmanhafizh8284?si=I-t4DfC1X-brwUEw" class="project-link text-white font-bold text-sm sm:text-base"> Live Demo </a>
+                  <a href="detail-project/project-detail_1.html" class="project-details ml-auto text-retro-espresso font-semibold flex items-center text-sm sm:text-base">
+                    Details <i class="fa-solid fa-arrow-right ml-2 text-xs sm:text-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Project 2 (Tampil Awal) -->
+            <div class="project-card reveal bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm">
+              <div class="project-image bg-retro-mustard/40 h-48 sm:h-56 w-full overflow-hidden relative">
+                <img src="img/foto-project/foto_2.png" alt="Sistem Informasi Manajemen Distribusi Listrik" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" loading="lazy"/>
+              </div>
+              <div class="p-5 sm:p-6">
+                <div class="flex flex-wrap gap-2 mb-3 sm:mb-4">
+                  <span class="project-tag bg-retro-orange/10 text-retro-orange border border-retro-orange/20 px-3 py-1 rounded-full text-xs font-semibold">Laravel</span>
+                  <span class="project-tag bg-retro-terracotta/10 text-retro-terracotta border border-retro-terracotta/20 px-3 py-1 rounded-full text-xs font-semibold">SQLite</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 text-retro-espresso">SPK Penerima Bantuan Langsung Tunai</h3>
+                <p class="text-sm sm:text-base text-retro-espresso/80 leading-relaxed mb-6">Sistem pendukung keputusan untuk membantu proses penentuan penerima bantuan menggunakan metode SAW dan ARAS.</p>
+                <div class="flex gap-3 items-center">
+                  <a href="https://youtube.com/@muhammadabdurrahmanhafizh8284?si=I-t4DfC1X-brwUEw" class="project-link text-white font-bold text-sm sm:text-base"> Live Demo </a>
+                  <a href="detail-project/project-detail_2.html" class="project-details ml-auto text-retro-espresso font-semibold flex items-center text-sm sm:text-base">
+                    Details <i class="fa-solid fa-arrow-right ml-2 text-xs sm:text-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Project 3 (Lanjutan - Tersembunyi Awalnya) -->
+            <div class="project-card reveal hidden-item hidden bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm" data-showmore="true">
+              <div class="project-image bg-retro-mustard/40 h-48 sm:h-56 w-full overflow-hidden relative">
+                <img src="img/foto-project/foto_3.png" alt="Sistem Informasi Manajemen Distribusi Listrik" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" loading="lazy"/>
+              </div>
+              <div class="p-5 sm:p-6">
+                <div class="flex flex-wrap gap-2 mb-3 sm:mb-4">
+                  <span class="project-tag bg-retro-orange/10 text-retro-orange border border-retro-orange/20 px-3 py-1 rounded-full text-xs font-semibold">PHP</span>
+                  <span class="project-tag bg-retro-terracotta/10 text-retro-terracotta border border-retro-terracotta/20 px-3 py-1 rounded-full text-xs font-semibold">MySQL</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 text-retro-espresso">Sistem Informasi Narapidana</h3>
+                <p class="text-sm sm:text-base text-retro-espresso/80 leading-relaxed mb-6">Sistem informasi untuk membantu pengelolaan data narapidana secara terstruktur dan terkomputerisasi.</p>
+                <div class="flex gap-3 items-center">
+                  <a href="https://youtube.com/@muhammadabdurrahmanhafizh8284?si=I-t4DfC1X-brwUEw" class="project-link text-white font-bold text-sm sm:text-base"> Live Demo </a>
+                  <a href="detail-project/project-detail_3.html" class="project-details ml-auto text-retro-espresso font-semibold flex items-center text-sm sm:text-base">
+                    Details <i class="fa-solid fa-arrow-right ml-2 text-xs sm:text-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Project 4 (Lanjutan - Tersembunyi Awalnya) -->
+            <div class="project-card reveal hidden-item hidden bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm" data-showmore="true">
+              <div class="project-image bg-retro-mustard/40 h-48 sm:h-56 w-full overflow-hidden relative">
+                <img src="img/foto-project/foto_4.png" alt="Sistem Informasi Manajemen Distribusi Listrik" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500" loading="lazy"/>
+              </div>
+              <div class="p-5 sm:p-6">
+                <div class="flex flex-wrap gap-2 mb-3 sm:mb-4">
+                  <span class="project-tag bg-retro-orange/10 text-retro-orange border border-retro-orange/20 px-3 py-1 rounded-full text-xs font-semibold">PHP</span>
+                  <span class="project-tag bg-retro-terracotta/10 text-retro-terracotta border border-retro-terracotta/20 px-3 py-1 rounded-full text-xs font-semibold">MySQL</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 text-retro-espresso">Sistem Pendaftaran Pernikahan</h3>
+                <p class="text-sm sm:text-base text-retro-espresso/80 leading-relaxed mb-6">Sistem informasi untuk membantu proses pendaftaran dan pencatatan pernikahan secara digital.</p>
+                <div class="flex gap-3 items-center">
+                  <a href="https://youtube.com/@muhammadabdurrahmanhafizh8284?si=I-t4DfC1X-brwUEw" class="project-link text-white font-bold text-sm sm:text-base"> Live Demo </a>
+                  <a href="detail-project/project-detail_4.html" class="project-details ml-auto text-retro-espresso font-semibold flex items-center text-sm sm:text-base">
+                    Details <i class="fa-solid fa-arrow-right ml-2 text-xs sm:text-sm"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- CERTIFICATES -->
+        <div id="certificates" class="tab-content hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            
+            <!-- Certificate 1 (Tampil Awal) -->
+            <div class="certificate-card bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm flex flex-col group">
+              <div class="certificate-image relative w-full aspect-[4/3] bg-retro-mustard/40 overflow-hidden cursor-pointer" onclick="openCertModal(this)">
+                <img 
+                  src="img/foto-sertifikat/foto_1.png" 
+                  alt="Sertifikat Web Developer" 
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 sm:p-5 text-center">
+                <h4 class="text-base sm:text-lg font-bold text-retro-espresso">Sertifikat Web Developer</h4>
+                <p class="text-xs sm:text-sm text-retro-espresso/70 mt-1">Dicoding / Kemendikbud</p>
+              </div>
+            </div>
+        
+            <!-- Certificate 2 (Tampil Awal) -->
+            <div class="certificate-card bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm flex flex-col group">
+              <div class="certificate-image relative w-full aspect-[4/3] bg-retro-mustard/40 overflow-hidden" onclick="openCertModal(this)">
+                <img 
+                  src="img/foto-sertifikat/foto_2.png" 
+                  alt="Sertifikat 02" 
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 sm:p-5 text-center">
+                <h4 class="text-base sm:text-lg font-bold text-retro-espresso">Sertifikat Laravel Basic</h4>
+                <p class="text-xs sm:text-sm text-retro-espresso/70 mt-1">Sanbercode</p>
+              </div>
+            </div>
+        
+            <!-- Certificate 3 (Tampil Awal) -->
+            <div class="certificate-card bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm flex flex-col group">
+              <div class="certificate-image relative w-full aspect-[4/3] bg-retro-mustard/40 overflow-hidden" onclick="openCertModal(this)">
+                <img 
+                  src="img/foto-sertifikat/Sertifikat Hackathon 6.0 Code Fest 2024.jpg" 
+                  alt="Sertifikat 03" 
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 sm:p-5 text-center">
+                <h4 class="text-base sm:text-lg font-bold text-retro-espresso">Sertifikat Database MySQL</h4>
+                <p class="text-xs sm:text-sm text-retro-espresso/70 mt-1">Rakamin Academy</p>
+              </div>
+            </div>
+        
+            <!-- Certificate 4 (Lanjutan - Tersembunyi Awalnya) -->
+            <div class="certificate-card hidden-item hidden bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm flex flex-col group" data-showmore="true">
+              <div class="certificate-image relative w-full aspect-[4/3] bg-retro-mustard/40 overflow-hidden" onclick="openCertModal(this)">
+                <img 
+                  src="img/foto-sertifikat/Sertifikat GDSC TELKOM LARAVEL 11.png" 
+                  alt="Sertifikat 04" 
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 sm:p-5 text-center">
+                <h4 class="text-base sm:text-lg font-bold text-retro-espresso">Sertifikat UI/UX Design</h4>
+                <p class="text-xs sm:text-sm text-retro-espresso/70 mt-1">Coursera</p>
+              </div>
+            </div>
+        
+            <!-- Certificate 5 (Lanjutan - Tersembunyi Awalnya) -->
+            <div class="certificate-card hidden-item hidden bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm flex flex-col group" data-showmore="true" >
+              <div class="certificate-image relative w-full aspect-[4/3] bg-retro-mustard/40 overflow-hidden" onclick="openCertModal(this)">
+                <img 
+                  src="img/foto-sertifikat/sertifikat Qubisa IoT.jpg" 
+                  alt="Sertifikat 05" 
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 sm:p-5 text-center">
+                <h4 class="text-base sm:text-lg font-bold text-retro-espresso">Sertifikat Tailwind CSS</h4>
+                <p class="text-xs sm:text-sm text-retro-espresso/70 mt-1">BuildWithAngga</p>
+              </div>
+            </div>
+        
+            <!-- Certificate 6 (Lanjutan - Tersembunyi Awalnya) -->
+            <div class="certificate-card hidden-item hidden bg-retro-mustard/20 border border-retro-espresso/10 rounded-2xl overflow-hidden shadow-sm flex flex-col group" data-showmore="true">
+              <div class="certificate-image relative w-full aspect-[4/3] bg-retro-mustard/40 overflow-hidden" onclick="openCertModal(this)">
+                <img 
+                  src="img/foto-sertifikat/Sertifikat Kominfo Berdaya lewat konten.jpg" 
+                  alt="Sertifikat 06" 
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4 sm:p-5 text-center">
+                <h4 class="text-base sm:text-lg font-bold text-retro-espresso">Sertifikat JavaScript ES6</h4>
+                <p class="text-xs sm:text-sm text-retro-espresso/70 mt-1">HackerRank</p>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+    
+        <!-- TECH STACK -->
+        <div id="stack" class="tab-content hidden">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-5">
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-brands fa-html5 text-2xl sm:text-3xl" style="color: #DD4B25;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">HTML</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-brands fa-css3-alt text-2xl sm:text-3xl" style="color: #2862E9;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">CSS</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-brands fa-square-js text-2xl sm:text-3xl" style="color: #efd81d;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">JavaScript</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-brands fa-bootstrap text-2xl sm:text-3xl" style="color: #7811F2;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">Bootstrap</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-brands fa-tailwind-css text-2xl sm:text-3xl" style="color: #00BCFF;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">Tailwind</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-solid fa-database text-2xl sm:text-3xl" style="color: #EA8C0F;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">MySQL</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-brands fa-php text-2xl sm:text-3xl" style="color: #7377AD;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">PHP</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-brands fa-laravel text-2xl sm:text-3xl" style="color: #D96B43;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">Laravel</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-solid fa-map-location-dot text-2xl sm:text-3xl" style="color: #AFEE59;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso">Leaflet</span>
+            </div>
+            <div class="stack-card rounded-lg bg-retro-mustard/20 p-4 sm:p-5 border border-retro-espresso/10 flex flex-col items-center justify-center gap-2">
+              <i class="fa-solid fa-diagram-project text-2xl sm:text-3xl" style="color: #1B5DBF;"></i>
+              <span class="font-semibold text-sm sm:text-base text-retro-espresso text-center">Visio</span>
+            </div>
+          </div>
+        </div>
+    
+        <!-- BUTTON SEE MORE -->
+        <div class="mt-12 text-center reveal" id="see-more-container">
+          <button id="see-more-btn" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-retro-orange text-white font-bold text-base sm:text-lg shadow-md hover:bg-retro-terracotta hover:gap-3 transition-all duration-300">
+            <span id="see-more-text">See More</span>
+            <i id="see-more-icon" class="fa-solid fa-chevron-down text-sm"></i>
+          </button>
+        </div>
+    
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- CONTACT -->
+    <!-- ========================================================= -->
+
+    <section id="contact" class="py-16 md:py-28">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-heading text-center reveal">
+
+              <h3 class="text-3xl text-center sm:text-4xl lg:text-5xl text-retro-terracotta font-extrabold tracking-wider">Hububgi Saya</h3>
+    
+              <p class="text-sm sm:text-base text-retro-espresso/80 mt-3 sm:mt-5 max-w-xl mx-auto">
+                Punya project, ide, atau kesempatan untuk berkolaborasi? Mari berdiskusi.
+              </p>
+            </div>
+    
+            <form class="cyber-form mt-8 sm:mt-14 reveal bg-retro-mustard/20 p-5 sm:p-8 rounded-2xl border border-retro-espresso/10">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                  <label class="block text-retro-espresso font-semibold mb-2 text-sm sm:text-base">Nama</label>
+                  <input type="text" class="rounded-xl w-full p-3 bg-retro-cream border border-retro-espresso/20 text-retro-espresso text-sm sm:text-base focus:outline-none focus:border-retro-orange" placeholder="Masukkan nama Anda" required />
+                </div>
+    
+                <div>
+                  <label class="block text-retro-espresso font-semibold mb-2 text-sm sm:text-base">Email</label>
+                  <input type="email" class="rounded-xl w-full p-3 bg-retro-cream border border-retro-espresso/20 text-retro-espresso text-sm sm:text-base focus:outline-none focus:border-retro-orange" placeholder="nama@email.com" required />
+                </div>
+              </div>
+    
+              <div class="mt-4 sm:mt-6">
+                <label class="block text-retro-espresso font-semibold mb-2 text-sm sm:text-base">Alamat</label>
+                <input type="text" class="rounded-xl w-full p-3 bg-retro-cream border border-retro-espresso/20 text-retro-espresso text-sm sm:text-base focus:outline-none focus:border-retro-orange" placeholder="Masukkan alamat Anda" />
+              </div>
+    
+              <div class="mt-4 sm:mt-6">
+                <label class="block text-retro-espresso font-semibold mb-2 text-sm sm:text-base">Pesan</label>
+                <textarea 
+                  class="rounded-xl w-full p-3 bg-retro-cream border border-retro-espresso/20 text-retro-espresso text-sm sm:text-base focus:outline-none focus:border-retro-orange"
+                  rows="5"
+                  placeholder="Tuliskan pesan Anda..."
+                  required
+                ></textarea>
+              </div>
+    
+              <button type="submit" class="w-full sm:w-auto bg-retro-orange text-white px-6 py-3 rounded-lg mt-6 hover:bg-retro-terracotta transition duration-300 font-semibold shadow-md text-sm sm:text-base">
+                <i class="fa-solid fa-paper-plane mr-2"></i>
+                Kirim Pesan
+              </button>
+            </form>
+    
+            <!-- Social Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 mt-8 sm:mt-12">
+              <a target="_blank" href="https://github.com/Abdurrahmanhafizh" class="contact-social-card bg-retro-mustard/20 border border-retro-espresso/10 p-4 sm:p-5 rounded-xl flex items-center gap-4 hover:border-retro-orange transition">
+                <i class="fa-brands fa-github text-xl sm:text-2xl text-retro-orange"></i>
+                <div>
+                  <span class="block font-bold text-retro-espresso text-sm sm:text-base">GitHub</span>
+                  <small class="text-retro-terracotta text-xs sm:text-sm">@Abdurrahmanhafizh</small>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs sm:text-sm text-retro-espresso/50"></i>
+              </a>
+    
+              <a target="_blank" href="https://www.linkedin.com/in/muhammad-abdurrahman-hafizh-s-kom-363b46291/" class="contact-social-card bg-retro-mustard/20 border border-retro-espresso/10 p-4 sm:p-5 rounded-xl flex items-center gap-4 hover:border-retro-orange transition">
+                <i class="fa-brands fa-linkedin text-xl sm:text-2xl text-retro-orange"></i>
+                <div>
+                  <span class="block font-bold text-retro-espresso text-sm sm:text-base">LinkedIn</span>
+                  <small class="text-retro-terracotta text-xs sm:text-sm">Muhammad Abdurrahman Hafizh, S.Kom</small>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs sm:text-sm text-retro-espresso/50"></i>
+              </a>
+    
+              <a target="_blank" href="https://www.instagram.com/mabdurrahmanhafizh/?utm_source=ig_web_button_share_sheet" class="contact-social-card bg-retro-mustard/20 border border-retro-espresso/10 p-4 sm:p-5 rounded-xl flex items-center gap-4 hover:border-retro-orange transition">
+                <i class="fa-brands fa-instagram text-xl sm:text-2xl text-retro-orange"></i>
+                <div>
+                  <span class="block font-bold text-retro-espresso text-sm sm:text-base">Instagram</span>
+                  <small class="text-retro-terracotta text-xs sm:text-sm">@mabdurrahmanhafizh</small>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs sm:text-sm text-retro-espresso/50"></i>
+              </a>
+            </div>
+          </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================================= -->
+
+    <footer class="border-t border-retro-espresso/10 py-6 sm:py-8 bg-retro-mustard/10">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+            <p class="text-retro-espresso/60 text-xs sm:text-sm font-medium leading-relaxed">
+              &copy; 2026 Muhammad Abdurrahman Hafizh. All rights reserved.
+            </p>
+          </div>
+    </footer>
+
+    <!-- Modal Preview Sertifikat -->
+    <div id="certModal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300">
+      <div class="relative max-w-4xl w-full bg-retro-mustard/10 border border-retro-espresso/20 rounded-2xl p-2 sm:p-4 shadow-2xl overflow-hidden">
+        <!-- Tombol Close -->
+        <button onclick="closeCertModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-retro-espresso text-white rounded-full flex items-center justify-center hover:bg-retro-terracotta transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+        
+        <!-- Gambar Preview -->
+        <div class="w-full max-h-[80vh] flex items-center justify-center overflow-hidden rounded-xl">
+          <img id="modalImg" alt="Certificate Preview" class="max-w-full max-h-[80vh] object-contain rounded-lg" />
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

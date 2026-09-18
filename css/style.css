@@ -1,0 +1,704 @@
+/* =========================================================PALET WARNA RETRO VINTAGEVintage Cream  : #F4EAE1 (Latar belakang utama)Warm Mustard   : #E0A96D (Aksen sekunder / Card)Retro Orange   : #D96B43 (Tombol aksi / CTA)Deep Terracotta: #A34828 (Teks sekunder / Hover)Dark Espresso  : #2C1D11 (Teks utama / Garis tepi)========================================================= */ /* =========================================================GLOBAL========================================================= */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Courier New", Courier, Georgia, serif;
+  background-color: #f4eae1;
+  color: #2c1d11;
+  overflow-x: hidden;
+}
+
+.vintage-grid-bg {
+  background-color: #f4eae1;
+  background-image:
+    radial-gradient(
+      circle at center,
+      transparent 60%,
+      rgba(44, 29, 17, 0.15) 100%
+    ),
+    linear-gradient(rgba(163, 72, 40, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 72, 40, 0.06) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    28px 28px,
+    28px 28px;
+}
+::selection {
+  background: #d96b43;
+  color: #f4eae1;
+} /* =========================================================SCROLLBAR========================================================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f4eae1;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0a96d;
+  border: 2px solid #2c1d11;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d96b43;
+} /* =========================================================NAVBAR========================================================= */
+.nav-link {
+  position: relative;
+  color: #a34828;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 600;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #d96b43;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -7px;
+  left: 0;
+  background: #d96b43;
+  transition: 0.3s;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+} /* =========================================================RETRO BACKGROUND GRID & PATTERN========================================================= */
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(163, 72, 40, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 72, 40, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+} /* =========================================================TEXT STYLES========================================================= */
+.neon-text {
+  text-shadow: 2px 2px 0px #e0a96d;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #d96b43, #a34828, #2c1d11);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+} /* 
+
+/* Animasi Kursor Berkedip */
+.typing-cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/*=========================================================CARD========================================================= */
+/* =========================================================
+   HERO LANYARD ID CARD VINTAGE
+========================================================= */
+/* Container Utama */
+.lanyard-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  max-width: 100%;
+  margin-top: -120px;
+  perspective: 1000px;
+  transform-origin: top center;
+  /* Animasi murni loop swing kiri - kanan */
+  animation: lanyardSwing 5s ease-in-out infinite;
+  user-select: none;
+  /* Hapus cursor: grab karena sudah tidak bisa ditarik */
+}
+
+/* Tali Lanyard */
+.lanyard-strap {
+  width: 32px;
+  height: 220px;
+  background: #d96b43;
+  border: 2px solid #2c1d11;
+  box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+  /* KUNCI UTAMA: Tumpuan skala harus tepat di bagian paling atas */
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.lanyard-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #f4eae1;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* Klip Pengait Logam */
+.lanyard-clip {
+  width: 44px;
+  height: 20px;
+  background: #e0a96d;
+  border: 2px solid #2c1d11;
+  border-radius: 4px;
+  margin-top: -2px;
+  z-index: 3;
+  box-shadow: 2px 2px 0px #2c1d11;
+  will-change: transform;
+}
+
+/* Kartu ID Card */
+.lanyard-card {
+  position: relative;
+  width: 100%;
+  background: #e0a96d;
+  border: 2px solid #2c1d11;
+  border-radius: 12px;
+  box-shadow: 6px 8px 0px #2c1d11;
+  padding: 24px 20px 18px 20px;
+  margin-top: -6px;
+  z-index: 2;
+  will-change: transform;
+}
+
+/* Lubang Gantungan Pada Kartu */
+.card-hole {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 8px;
+  background: #f4eae1;
+  border: 2px solid #2c1d11;
+  border-radius: 10px;
+}
+
+/* Animasi Ayunan Halus Lanyard */
+@keyframes lanyardSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.8deg);
+  }
+  75% {
+    transform: rotate(-0.8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+=========================================================BUTTONS=========================================================
+  */
+  .cyber-button,
+.cyber-button-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 2px solid #2c1d11;
+}
+.cyber-button {
+  color: #f4eae1;
+  background: #d96b43;
+  box-shadow: 4px 4px 0px #2c1d11;
+}
+.cyber-button:hover {
+  background: #a34828;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #2c1d11;
+  color: #f4eae1;
+}
+.cyber-button-outline {
+  color: #2c1d11;
+  border: 2px solid #2c1d11;
+  background: transparent;
+  box-shadow: 4px 4px 0px #2c1d11;
+}
+.cyber-button-outline:hover {
+  background: #e0a96d;
+  color: #2c1d11;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #2c1d11;
+} /* =========================================================TECH BADGE========================================================= */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2c1d11;
+  border: 2px solid #2c1d11;
+  background: #e0a96d;
+  box-shadow: 2px 2px 0px #2c1d11;
+  transition: 0.3s;
+}
+.tech-badge:hover {
+  border-color: #2c1d11;
+  background: #d96b43;
+  color: #f4eae1;
+  transform: translateY(-2px);
+} /* =========================================================SOCIAL========================================================= */
+.social-icon {
+  color: #a34828;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.social-icon:hover {
+  color: #d96b43;
+  transform: translateY(-3px) scale(1.1);
+} /* =========================================================SECTION HEADING========================================================= */
+.section-heading span {
+  color: #a34828;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+.section-heading h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #2c1d11;
+  margin-top: 10px;
+}
+.section-heading h2 span {
+  color: #d96b43;
+  letter-spacing: normal;
+} 
+/* =========================================================ABOUT  /* =========================================================
+/* ========================================================= PHOTO ========================================================= */
+.photo-wrapper {
+  position: relative;
+  border-radius: 50%;
+  /* BORDER BERATURAN DI BINGKAI LUAR */
+  border: 4px solid #d96b43;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  overflow: hidden; /* Memotong foto yang meluap keluar border saat zoom */
+  cursor: pointer;
+  transition:
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.photo-wrapper img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 50%;
+
+  transform: scale(1) rotate(0deg);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Saat hover, foto di dalam membesar & miring, tapi bingkai/border tetap utuh */
+.photo-wrapper:hover img {
+  transform: scale(1.12) rotate(-5deg);
+}
+
+.photo-wrapper:hover {
+  border-color: #e0a96d;
+  box-shadow: 0 20px 35px -5px rgba(217, 107, 67, 0.35);
+}
+
+/* Penyesuaian Responsif untuk Tampilan HP/Tablet */
+@media (max-width: 1024px) {
+  .photo-wrapper {
+    width: 280px;
+    height: 280px;
+    margin-top: 0;
+  }
+}
+.photo-placeholder {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: #f4eae1;
+  border: 2px solid #2c1d11;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a34828;
+  font-size: 60px;
+}
+.photo-placeholder span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2c1d11;
+  margin-top: 15px;
+} /* =========================================================MOTTO========================================================= */
+.motto-card {
+  border-left: 5px solid #d96b43;
+  border: 2px solid #2c1d11;
+  border-left-width: 6px;
+  background: #e0a96d;
+  color: #2c1d11;
+  padding: 20px 25px;
+  position: relative;
+  box-shadow: 4px 4px 0px #2c1d11;
+} /* =========================================================STATISTICS========================================================= */
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+  border: 2px solid #2c1d11;
+  background: #e0a96d;
+  box-shadow: 4px 4px 0px #2c1d11;
+  transition: 0.3s;
+  height: 208px;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 7px 7px 0px #2c1d11;
+  background: #f4eae1;
+}
+.stat-card > i {
+  font-size: 30px;
+  color: #d96b43;
+}
+.counter {
+  font-size: 42px;
+  font-weight: bold;
+  color: #2c1d11;
+}
+.stat-card p {
+  color: #a34828;
+  font-weight: 600;
+} /* =========================================================TABS========================================================= */
+.tab-button {
+  padding: 11px 22px;
+  color: #2c1d11;
+  font-weight: 600;
+  border: 2px solid #2c1d11;
+  background: #e0a96d;
+  box-shadow: 3px 3px 0px #2c1d11;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.tab-button:hover,
+.tab-button.active {
+  color: #f4eae1;
+  background: #d96b43;
+  border-color: #2c1d11;
+  box-shadow: 5px 5px 0px #2c1d11;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+} /* =========================================================PROJECT========================================================= */
+.project-card {
+  background: #e0a96d;
+  border: 2px solid #2c1d11;
+  box-shadow: 5px 5px 0px #2c1d11;
+  overflow: hidden;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 8px 8px 0px #2c1d11;
+}
+.project-image {
+  height: 240px;
+  background: #f4eae1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #2c1d11;
+}
+.project-placeholder {
+  color: #a34828;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.project-tag {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #2c1d11;
+  border: 1px solid #2c1d11;
+  background: #f4eae1;
+}
+.project-link {
+  padding: 10px 16px;
+  color: #f4eae1;
+  background: #d96b43;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #2c1d11;
+  text-decoration: none;
+}
+.project-link:hover {
+  background: #2c1d11;
+  color: #f4eae1;
+}
+.project-details {
+  padding: 10px 16px;
+  color: #2c1d11;
+  border: 1px solid #2c1d11;
+  background: #f4eae1;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.project-details:hover {
+  background: #d96b43;
+  color: #f4eae1;
+} /* =========================================================CERTIFICATE========================================================= */
+.certificate-card {
+  background: #e0a96d;
+  border: 2px solid #2c1d11;
+  box-shadow: 4px 4px 0px #2c1d11;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 7px 7px 0px #2c1d11;
+  background: #f4eae1;
+}
+.certificate-placeholder {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a34828;
+  background: #f4eae1;
+  border-bottom: 2px solid #2c1d11;
+} /* =========================================================TECH STACK========================================================= */
+.stack-card {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: 2px solid #2c1d11;
+  background: #e0a96d;
+  box-shadow: 4px 4px 0px #2c1d11;
+  transition: 0.4s;
+}
+.stack-card i {
+  font-size: 50px;
+  color: #2c1d11;
+  transition: 0.4s;
+}
+.stack-card span {
+  color: #2c1d11;
+  font-weight: 700;
+  font-size: 14px;
+}
+.stack-card:hover {
+  transform: translateY(-5px);
+  background: #f4eae1;
+  box-shadow: 7px 7px 0px #2c1d11;
+}
+.stack-card:hover i {
+  color: #d96b43;
+  transform: scale(1.15);
+} /* =========================================================FORM========================================================= */
+.cyber-form {
+  padding: 30px;
+  background: #e0a96d;
+  border: 2px solid #2c1d11;
+  box-shadow: 6px 6px 0px #2c1d11;
+}
+.cyber-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #2c1d11;
+  font-weight: 700;
+  font-size: 13px;
+}
+.cyber-form input,
+.cyber-form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  color: #2c1d11;
+  background: #f4eae1;
+  border: 2px solid #2c1d11;
+  outline: none;
+  transition: 0.3s;
+  font-family: inherit;
+  resize: vertical;
+}
+.cyber-form input:focus,
+.cyber-form textarea:focus {
+  border-color: #d96b43;
+  box-shadow: 3px 3px 0px #2c1d11;
+} /* =========================================================CONTACT SOCIAL========================================================= */
+.contact-social-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #e0a96d;
+  border: 2px solid #2c1d11;
+  box-shadow: 4px 4px 0px #2c1d11;
+  color: #2c1d11;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.contact-social-card > i:first-child {
+  color: #d96b43;
+  font-size: 25px;
+}
+.contact-social-card span {
+  display: block;
+  font-weight: 700;
+}
+.contact-social-card small {
+  color: #a34828;
+  font-weight: 600;
+}
+.contact-social-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0px #2c1d11;
+  background: #f4eae1;
+} /* =========================================================ANIMATIONS========================================================= */
+/* State Awal: Elemen Transparan & Bergeser ke Bawah */
+/* =========================================================
+   STAGGERED REVEAL ANIMATIONS (DIRECTIONAL)
+========================================================= */
+
+/* Default / Fallback: Bawah ke Atas */
+.reveal,
+.reveal-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* =========================================================
+   ANIMASI MASUK SUPER SMOOTH (GPU ACCELERATED)
+========================================================= */
+
+/* State Awal: Digeser ke KANAN & Transparan */
+.reveal-left {
+  opacity: 0 !important;
+  /* Menggunakan translate3d untuk memaksa GPU (Hardware Acceleration) memproses animasi */
+  transform: translate3d(60px, 0, 0) !important;
+  
+  /* 
+     - Durasi: 1.6s (lebih lambat agar gerakan tidak mendadak)
+     - Easing: cubic-bezier(0.22, 1, 0.36, 1) memberikan efek pengereman yang sangat halus di akhir (smooth deceleration)
+  */
+  transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  
+  /* Memberi tahu browser untuk mempersiapkan komposisi layer sebelum animasi berjalan */
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+/* State Akhir saat di-Scroll (Muncul di Viewport) */
+.reveal-left.show {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+/* Muncul dari KIRI ke KANAN (Geser awal ke kiri -60px) */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Kondisi saat elemen muncul di Viewport (Scroll trigger) */
+.reveal.show,
+.reveal-up.show,
+.reveal-left.show,
+.reveal-right.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(217, 107, 67, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(217, 107, 67, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(217, 107, 67, 0);
+  }
+} /* =========================================================RESPONSIVE========================================================= */
+@media (max-width: 768px) {
+  .hero-terminal {
+    transform: none;
+  }
+  .photo-wrapper {
+    width: 280px;
+    height: 360px;
+  }
+
+  .stat-card {
+    padding: 22px;
+  }
+
+  .cyber-form {
+    padding: 20px;
+  }
+}

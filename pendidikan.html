@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendidikan - Muhammad Abdurrahman Hafizh</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <!-- Google Fonts: Space Grotesk & Courier Prime untuk kesan Vintage Digital -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              retro: {
+                cream: "#F4EAE1" /* Latar belakang utama */,
+                mustard: "#E0A96D" /* Akses sekunder / Card */,
+                orange: "#D96B43" /* Tombol aksi / CTA */,
+                terracotta: "#A34828" /* Teks sekunder / Hover */,
+                espresso: "#2C1D11" /* Teks utama / Garis tepi */,
+              },
+            },
+            fontFamily: {
+              sans: ["Space Grotesk", "sans-serif"],
+              mono: ["Courier Prime", "monospace"],
+              courier: ["Courier New, Courier, Georgia, serif"]
+            },
+          },
+        },
+      };
+    </script>
+    
+
+    <style>
+      /* Styling Dasar Background Vintage Grid */
+
+      body {
+        background-color: #f4eae1;
+        color: #2c1d11;
+        overflow-x: hidden;
+      }
+
+      /* Pattern Grid Vintage */
+      .retro-grid {
+        background-image:
+          radial-gradient(#2c1d11 0.75px, transparent 0.75px),
+          radial-gradient(#2c1d11 0.75px, #f4eae1 0.75px);
+        background-size: 30px 30px;
+        background-position:
+          0 0,
+          15px 15px;
+        opacity: 0.15;
+      }
+
+      /* Efek Neubrutalism / Vintage Card Shadow */
+      .retro-card-shadow {
+        box-shadow: 6px 6px 0px 0px #2c1d11;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .retro-card-shadow:hover {
+        transform: translateY(-4px) translateX(-2px);
+        box-shadow: 10px 10px 0px 0px #2c1d11;
+      }
+
+      /* Efek Animasi Reveal / Fade In Only saat Scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(35px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-retro-cream text-retro-espresso font-sans">
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-[#2C1D11]/20 bg-[#F4EAE1]/90 backdrop-blur-xl transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="h-20 flex items-center justify-between">
+          <a href="index.html" class="text-2xl font-bold text-[#2C1D11] hover:opacity-80 transition duration-300 font-courier">Hafizh<span class="text-[#D96B43]">.</span>
+          </a>
+          <a href="index.html" class="px-4 py-2 border-2 border-[#2C1D11] text-[#2C1D11] font-bold rounded-lg hover:bg-[#2C1D11] hover:text-[#F4EAE1] active:scale-95 transition-all duration-300 flex items-center group">
+            <i class="fa-solid fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform duration-300"></i>Back
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section Education (Ditambahkan pt-24 sm:pt-32 agar ada jarak dari fixed navbar) -->
+    <section id="education" class="pt-24 sm:pt-32 pb-16 sm:pb-24 relative overflow-x-clip">
+      <!-- Pattern Background -->
+      <div class="absolute inset-0 retro-grid pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-12 sm:mb-20 reveal">
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-retro-espresso tracking-tight">
+            Jejak
+            <span class="text-retro-orange underline decoration-retro-mustard decoration-wavy">Pendidikan</span>
+          </h2>
+          <p class="mt-3 text-retro-terracotta font-mono text-xs sm:text-base max-w-xl mx-auto">
+            Riwayat studi formal dari pendidikan dasar hingga pendidikan tinggi.
+          </p>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="relative">
+          <!-- Garis Utama Timeline Vertikal -->
+          <div class="absolute top-0 bottom-0 left-6 md:left-1/2 w-1 bg-retro-espresso -translate-x-1/2 rounded-full hidden sm:block"></div>
+
+          <div class="space-y-10 sm:space-y-16">
+            <!-- 1. UNIVERSITAS -->
+            <div class="relative flex flex-col md:flex-row items-center reveal">
+              <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-retro-orange border-4 border-retro-espresso z-20 flex items-center justify-center text-retro-cream font-bold shadow-md hidden sm:flex">
+                <i class="fa-solid fa-university text-xs"></i>
+              </div>
+
+              <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                <div class="bg-retro-cream border-2 border-retro-espresso rounded-xl p-6 sm:p-8 retro-card-shadow relative">
+                  <div class="inline-flex justify-center items-center gap-1.5 px-3 py-1 bg-retro-mustard border border-retro-espresso rounded-md font-mono text-xs font-bold text-retro-espresso mb-3 shadow-sm">
+                    <i class="fa-regular fa-calendar-alt text-retro-terracotta"></i>
+                  Agustus 2020 - Januari 2026
+                  </div>
+
+                  <h3 class="text-xl sm:text-2xl font-bold text-retro-espresso">
+                  Universitas Islam Negeri Sumatera Utara Medan
+                  </h3>
+                  <h4 class="text-retro-terracotta font-mono text-sm sm:text-base font-semibold mt-1">S1 Sistem Informasi</h4>
+
+                  <p class="text-retro-espresso/80 text-sm mt-3 leading-relaxed">
+                    Fokus mempelajari rekayasa perangkat lunak, arsitektur basis
+                    data, pengembangan aplikasi web dengan kerangka kerja
+                    modern, serta analisis logika bisnis sistem.
+                  </p>
+
+                  <div class="mt-4 pt-4 border-t border-retro-espresso/20 flex flex-wrap gap-2 justify-start md:justify-end">
+                    <span class="px-2 py-0.5 bg-retro-orange/20 border border-retro-espresso/30 rounded text-[11px] font-mono font-semibold">IPK: 3.83</span>
+                    <span class="px-2 py-0.5 bg-retro-mustard/30 border border-retro-espresso/30 rounded text-[11px] font-mono font-semibold">Fresh Graduate</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2"></div>
+            </div>
+
+            <!-- 2. SMK -->
+            <div class="relative flex flex-col md:flex-row items-center reveal">
+              <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-retro-mustard border-4 border-retro-espresso z-20 flex items-center justify-center text-retro-espresso font-bold shadow-md hidden sm:flex">
+                <i class="fa-solid fa-laptop-code text-xs"></i>
+              </div>
+
+              <div class="w-full md:w-1/2"></div>
+
+              <div class="w-full md:w-1/2 md:pl-12 md:text-left">
+                <div class="bg-retro-cream border-2 border-retro-espresso rounded-xl p-6 sm:p-8 retro-card-shadow relative">                
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-retro-orange/30 border border-retro-espresso rounded-md font-mono text-xs font-bold text-retro-espresso mb-3 shadow-sm">
+                    <i class="fa-regular fa-calendar-alt text-retro-terracotta"></i>
+                    2017 - 2020
+                  </div>
+
+                  <h3 class="text-xl sm:text-2xl font-bold text-retro-espresso">
+                    SMK Raksana 2 Medan
+                  </h3>
+                  <h4 class="text-retro-terracotta font-mono text-sm sm:text-base font-semibold mt-1">
+                    Rekayasa Perangkat Lunak (RPL)
+                  </h4>
+                  <h5 class="text-retro-orange font-mono text-sm sm:text-base font-semibold mt-1">
+                    Kejuruan Teknik Informatika
+                  </h5>
+                  <p class="text-retro-espresso/80 text-sm mt-3 leading-relaxed">
+                    Mempelajari dasar-dasar pemrograman web, algoritma dasar,
+                    pembuatan basis data MySQL, serta pengenalan dasar instalasi
+                    jaringan & sistem operasi.
+                  </p>
+
+                  <div class="mt-4 pt-4 border-t border-retro-espresso/20 flex flex-wrap gap-2 justify-start">
+                    <span class="px-2 py-0.5 bg-retro-mustard/40 border border-retro-espresso/30 rounded text-[11px] font-mono font-semibold">Lulus</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. MTs -->
+            <div class="relative flex flex-col md:flex-row items-center reveal">
+              <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-retro-terracotta border-4 border-retro-espresso z-20 flex items-center justify-center text-retro-cream font-bold shadow-md hidden sm:flex">
+                <i class="fa-solid fa-book-open text-xs"></i>
+              </div>
+
+              <div class="w-full md:w-1/2 md:pr-12 md:text-right">
+                <div class="bg-retro-cream border-2 border-retro-espresso rounded-xl p-6 sm:p-8 retro-card-shadow relative">
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-retro-mustard border border-retro-espresso rounded-md font-mono text-xs font-bold text-retro-espresso mb-3 shadow-sm">
+                    <i class="fa-regular fa-calendar-alt text-retro-terracotta"></i>
+                    2014 - 2017
+                  </div>
+
+                  <h3 class="text-xl sm:text-2xl font-bold text-retro-espresso">
+                    MTs Amal Shaleh
+                  </h3>
+                  <h4 class="text-retro-terracotta font-mono text-sm sm:text-base font-semibold mt-1">
+                    Pendidikan Menengah Pertama
+                  </h4>
+
+                  <p class="text-retro-espresso/80 text-sm mt-3 leading-relaxed">
+                    Menempuh pendidikan menengah dengan penguatan logika sains
+                    umum serta pendidikan ilmu agama dan bahasa.
+                  </p>
+
+                  <div class="mt-4 pt-4 border-t border-retro-espresso/20 flex flex-wrap gap-2 justify-start md:justify-end">
+                    <span class="px-2 py-0.5 bg-retro-mustard/30 border border-retro-espresso/30 rounded text-[11px] font-mono font-semibold">Lulus</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2"></div>
+            </div>
+
+            <!-- 4. SD -->
+            <div class="relative flex flex-col md:flex-row items-center reveal">
+              <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-retro-espresso border-4 border-retro-cream z-20 flex items-center justify-center text-retro-cream font-bold shadow-md hidden sm:flex">
+                <i class="fa-solid fa-child text-xs"></i>
+              </div>
+
+              <div class="w-full md:w-1/2"></div>
+
+              <div class="w-full md:w-1/2 md:pl-12 md:text-left">
+                <div class="bg-retro-cream border-2 border-retro-espresso rounded-xl p-6 sm:p-8 retro-card-shadow relative">
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-retro-orange/30 border border-retro-espresso rounded-md font-mono text-xs font-bold text-retro-espresso mb-3 shadow-sm">
+                    <i class="fa-regular fa-calendar-alt text-retro-terracotta"></i>
+                    2011 - 2017
+                  </div>
+
+                  <h3 class="text-xl sm:text-2xl font-bold text-retro-espresso">
+                    SD Nurul Huda Medan
+                  </h3>
+                  <h4 class="text-retro-terracotta font-mono text-sm sm:text-base font-semibold mt-1">
+                    Pendidikan Dasar
+                  </h4>
+
+                  <p class="text-retro-espresso/80 text-sm mt-3 leading-relaxed">
+                    Pendidikan dasar awal dalam membangun karakter, pengetahuan
+                    umum dasar, serta pengembangan minat terhadap sains dan
+                    teknologi.
+                  </p>
+
+                  <div class="mt-4 pt-4 border-t border-retro-espresso/20 flex flex-wrap gap-2 justify-start">
+                    <span class="px-2 py-0.5 bg-retro-mustard/40 border border-retro-espresso/30 rounded text-[11px] font-mono font-semibold">Lulus</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-retro-espresso/10 py-6 sm:py-8 bg-retro-mustard/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-retro-espresso/60 text-xs sm:text-sm font-medium leading-relaxed">
+          &copy; 2026 Muhammad Abdurrahman Hafizh. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript Animasi Fade In (Scroll Trigger) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const educationCards = document.querySelectorAll(
+          "#education .retro-card-shadow",
+        );
+        educationCards.forEach((card, index) => {
+          if (!card.classList.contains("reveal")) {
+            card.classList.add("reveal");
+            card.style.transitionDelay = `${(index % 2) * 0.15}s`;
+          }
+        });
+
+        const revealElements = document.querySelectorAll(".reveal");
+
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px",
+          },
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      });
+    </script>
+  </body>
+</html>

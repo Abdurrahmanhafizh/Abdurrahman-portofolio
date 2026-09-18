@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Detail | Hafizh</title>
+
+        <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              retro: {
+                cream: "#F4EAE1",     /* Latar belakang utama */
+                mustard: "#E0A96D",   /* Akses sekunder / Card */
+                orange: "#D96B43",    /* Tombol aksi / CTA */
+                terracotta: "#A34828",/* Teks sekunder / Hover */
+                espresso: "#2C1D11",  /* Teks utama / Garis tepi */
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Style Animasi Tambahan -->
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#F4EAE1] text-[#2C1D11] antialiased vintage-grid-bg">
+    <!-- ========================================================= -->
+    <!-- NAVBAR -->
+    <!-- ========================================================= -->
+
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-[#2C1D11]/20 bg-[#F4EAE1]/90 backdrop-blur-xl transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="h-20 flex items-center justify-between">
+          <a
+            href="../index.html"
+            class="text-2xl font-bold text-[#2C1D11] hover:opacity-80 transition duration-300"
+          >
+            Hafizh<span class="text-[#D96B43]">.</span>
+          </a>
+          <a
+            href="../index.html"
+            class="px-4 py-2 border-2 border-[#2C1D11] text-[#2C1D11] font-bold rounded-lg hover:bg-[#2C1D11] hover:text-[#F4EAE1] active:scale-95 transition-all duration-300 flex items-center group"
+          >
+            <i
+              class="fa-solid fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform duration-300"
+            ></i>
+            Back
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========================================================= -->
+    <!-- PROJECT DETAIL -->
+    <!-- ========================================================= -->
+
+    <main class="pt-20 sm:pt-28 lg:pt-32 pb-16 sm:pb-24 lg:pb-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-14 items-start"
+        >
+          <!-- ================================================= -->
+          <!-- LEFT SECTION -->
+          <!-- ================================================= -->
+          <div class="animate-fade-in-up">
+            <span
+              class="text-[#A34828] font-bold text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] inline-block animate-pulse"
+            >
+              Project Details
+            </span>
+
+            <h1
+              class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mt-2 sm:mt-4 mb-4 sm:mb-6 text-[#2C1D11] leading-tight"
+            >
+              Sistem Informasi
+              <span class="text-[#D96B43]"> Distribusi Listrik </span>
+            </h1>
+
+            <p
+              class="text-[#2C1D11]/80 text-base sm:text-lg leading-relaxed sm:leading-8 mb-6 sm:mb-8"
+            >
+              Sistem Informasi Manajemen Distribusi Listrik dikembangkan untuk
+              membantu proses pengelolaan data penyulang, LBS, jalur distribusi,
+              serta informasi arus beban secara terintegrasi.
+            </p>
+
+            <!-- Small Stats -->
+            <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div
+                class="stat-card bg-[#E0A96D] p-3.5 sm:p-5 rounded-xl border-2 border-[#2C1D11] shadow-[4px_4px_0px_#2C1D11] flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-4 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#2C1D11] transition-all duration-300 group cursor-default"
+              >
+                <i
+                  class="fa-solid fa-layer-group text-2xl sm:text-3xl text-[#A34828] group-hover:scale-110 transition-transform duration-300 shrink-0"
+                ></i>
+                <div>
+                  <strong
+                    class="text-2xl sm:text-3xl text-[#2C1D11] block font-extrabold"
+                  >
+                    5+
+                  </strong>
+                  <p class="text-[#2C1D11]/80 font-medium text-xs sm:text-sm">
+                    Technologies
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="stat-card bg-[#E0A96D] p-3.5 sm:p-5 rounded-xl border-2 border-[#2C1D11] shadow-[4px_4px_0px_#2C1D11] flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-4 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#2C1D11] transition-all duration-300 group cursor-default"
+              >
+                <i
+                  class="fa-solid fa-list-check text-2xl sm:text-3xl text-[#A34828] group-hover:scale-110 transition-transform duration-300 shrink-0"
+                ></i>
+                <div>
+                  <strong
+                    class="text-2xl sm:text-3xl text-[#2C1D11] block font-extrabold"
+                  >
+                    10+
+                  </strong>
+                  <p class="text-[#2C1D11]/80 font-medium text-xs sm:text-sm">
+                    Main Features
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
+              <a
+                href="#"
+                class="w-full sm:w-auto justify-center px-6 py-3 bg-[#D96B43] text-[#F4EAE1] font-bold text-sm sm:text-base rounded-xl border-2 border-[#2C1D11] shadow-[4px_4px_0px_#2C1D11] hover:bg-[#A34828] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#2C1D11] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-200 inline-flex items-center group"
+              >
+                <i
+                  class="fa-solid fa-globe mr-2 group-hover:rotate-12 transition-transform duration-300"
+                ></i>
+                Live Demo
+              </a>
+
+              <a
+                href="#"
+                class="w-full sm:w-auto justify-center px-6 py-3 bg-[#F4EAE1] text-[#2C1D11] font-bold text-sm sm:text-base rounded-xl border-2 border-[#2C1D11] shadow-[4px_4px_0px_#2C1D11] hover:bg-[#E0A96D] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#2C1D11] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-200 inline-flex items-center group"
+              >
+                <i
+                  class="fa-brands fa-github mr-2 group-hover:scale-110 transition-transform duration-300"
+                ></i>
+                GitHub
+              </a>
+            </div>
+
+            <!-- Technologies -->
+            <h2
+              class="text-xl sm:text-2xl font-bold mb-4 sm:mb-5 text-[#2C1D11]"
+            >
+              Teknologi yang Digunakan
+            </h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3">
+              <div
+                class="tech-badge bg-[#E0A96D] text-[#2C1D11] font-bold text-xs sm:text-sm p-2.5 sm:p-3 rounded-lg border-2 border-[#2C1D11] flex items-center gap-2 hover:-translate-y-1 hover:bg-[#D96B43] hover:text-[#F4EAE1] transition-all duration-300 group cursor-default"
+              >
+                <i
+                  class="fa-brands fa-php text-sm sm:text-base text-[#A34828] group-hover:text-[#F4EAE1] transition-colors"
+                ></i>
+                PHP
+              </div>
+
+              <div
+                class="tech-badge bg-[#E0A96D] text-[#2C1D11] font-bold text-xs sm:text-sm p-2.5 sm:p-3 rounded-lg border-2 border-[#2C1D11] flex items-center gap-2 hover:-translate-y-1 hover:bg-[#D96B43] hover:text-[#F4EAE1] transition-all duration-300 group cursor-default"
+              >
+                <i
+                  class="fa-brands fa-laravel text-sm sm:text-base text-[#A34828] group-hover:text-[#F4EAE1] transition-colors"
+                ></i>
+                Laravel
+              </div>
+
+              <div
+                class="tech-badge bg-[#E0A96D] text-[#2C1D11] font-bold text-xs sm:text-sm p-2.5 sm:p-3 rounded-lg border-2 border-[#2C1D11] flex items-center gap-2 hover:-translate-y-1 hover:bg-[#D96B43] hover:text-[#F4EAE1] transition-all duration-300 group cursor-default"
+              >
+                <i
+                  class="fa-solid fa-database text-sm sm:text-base text-[#A34828] group-hover:text-[#F4EAE1] transition-colors"
+                ></i>
+                MySQL
+              </div>
+
+              <div
+                class="tech-badge bg-[#E0A96D] text-[#2C1D11] font-bold text-xs sm:text-sm p-2.5 sm:p-3 rounded-lg border-2 border-[#2C1D11] flex items-center gap-2 hover:-translate-y-1 hover:bg-[#D96B43] hover:text-[#F4EAE1] transition-all duration-300 group cursor-default"
+              >
+                <i
+                  class="fa-solid fa-map text-sm sm:text-base text-[#A34828] group-hover:text-[#F4EAE1] transition-colors"
+                ></i>
+                Leaflet
+              </div>
+
+              <div
+                class="tech-badge bg-[#E0A96D] text-[#2C1D11] font-bold text-xs sm:text-sm p-2.5 sm:p-3 rounded-lg border-2 border-[#2C1D11] flex items-center gap-2 hover:-translate-y-1 hover:bg-[#D96B43] hover:text-[#F4EAE1] transition-all duration-300 group cursor-default"
+              >
+                <i
+                  class="fa-solid fa-wind text-sm sm:text-base text-[#A34828] group-hover:text-[#F4EAE1] transition-colors"
+                ></i>
+                Tailwind
+              </div>
+
+              <div
+                class="tech-badge bg-[#E0A96D] text-[#2C1D11] font-bold text-xs sm:text-sm p-2.5 sm:p-3 rounded-lg border-2 border-[#2C1D11] flex items-center gap-2 hover:-translate-y-1 hover:bg-[#D96B43] hover:text-[#F4EAE1] transition-all duration-300 group cursor-default"
+              >
+                <i
+                  class="fa-brands fa-js text-sm sm:text-base text-[#A34828] group-hover:text-[#F4EAE1] transition-colors"
+                ></i>
+                JavaScript
+              </div>
+            </div>
+          </div>
+
+          <!-- ================================================= -->
+          <!-- RIGHT SECTION -->
+          <!-- ================================================= -->
+          <div
+            class="animate-fade-in-up mt-4 lg:mt-0"
+            style="animation-delay: 150ms"
+          >
+            <!-- Project Image -->
+            <div
+              class="project-image h-56 sm:h-80 lg:h-[400px] w-full bg-[#E0A96D] rounded-xl sm:rounded-2xl border-2 border-[#2C1D11] shadow-[4px_4px_0px_#2C1D11] sm:shadow-[6px_6px_0px_#2C1D11] flex items-center justify-center hover:shadow-[8px_8px_0px_#2C1D11] sm:hover:shadow-[10px_10px_0px_#2C1D11] hover:-translate-y-1 transition-all duration-300 group cursor-pointer overflow-hidden relative"
+            >
+              <span
+                class="text-[#2C1D11]/70 font-bold text-xs sm:text-base uppercase tracking-widest group-hover:scale-105 transition-transform duration-300"
+              >
+                Project Screenshot
+              </span>
+            </div>
+
+            <!-- Main Features -->
+            <div class="mt-8 sm:mt-10">
+              <h2
+                class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-[#2C1D11]"
+              >
+                Fitur Utama
+              </h2>
+
+              <ul class="space-y-2.5 sm:space-y-4">
+                <li
+                  class="flex gap-3 sm:gap-4 items-center p-2 rounded-lg hover:bg-[#E0A96D]/30 transition-colors duration-200 group"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-[#D96B43] text-base sm:text-lg group-hover:scale-125 transition-transform duration-300 shrink-0"
+                  ></i>
+                  <span
+                    class="text-[#2C1D11]/80 font-medium text-sm sm:text-base"
+                  >
+                    Pengelolaan data penyulang
+                  </span>
+                </li>
+
+                <li
+                  class="flex gap-3 sm:gap-4 items-center p-2 rounded-lg hover:bg-[#E0A96D]/30 transition-colors duration-200 group"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-[#D96B43] text-base sm:text-lg group-hover:scale-125 transition-transform duration-300 shrink-0"
+                  ></i>
+                  <span
+                    class="text-[#2C1D11]/80 font-medium text-sm sm:text-base"
+                  >
+                    Pengelolaan data LBS
+                  </span>
+                </li>
+
+                <li
+                  class="flex gap-3 sm:gap-4 items-center p-2 rounded-lg hover:bg-[#E0A96D]/30 transition-colors duration-200 group"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-[#D96B43] text-base sm:text-lg group-hover:scale-125 transition-transform duration-300 shrink-0"
+                  ></i>
+                  <span
+                    class="text-[#2C1D11]/80 font-medium text-sm sm:text-base"
+                  >
+                    Visualisasi jalur distribusi
+                  </span>
+                </li>
+
+                <li
+                  class="flex gap-3 sm:gap-4 items-center p-2 rounded-lg hover:bg-[#E0A96D]/30 transition-colors duration-200 group"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-[#D96B43] text-base sm:text-lg group-hover:scale-125 transition-transform duration-300 shrink-0"
+                  ></i>
+                  <span
+                    class="text-[#2C1D11]/80 font-medium text-sm sm:text-base"
+                  >
+                    Monitoring arus beban penyulang
+                  </span>
+                </li>
+
+                <li
+                  class="flex gap-3 sm:gap-4 items-center p-2 rounded-lg hover:bg-[#E0A96D]/30 transition-colors duration-200 group"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-[#D96B43] text-base sm:text-lg group-hover:scale-125 transition-transform duration-300 shrink-0"
+                  ></i>
+                  <span
+                    class="text-[#2C1D11]/80 font-medium text-sm sm:text-base"
+                  >
+                    Peta distribusi berbasis Leaflet
+                  </span>
+                </li>
+
+                <li
+                  class="flex gap-3 sm:gap-4 items-center p-2 rounded-lg hover:bg-[#E0A96D]/30 transition-colors duration-200 group"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-[#D96B43] text-base sm:text-lg group-hover:scale-125 transition-transform duration-300 shrink-0"
+                  ></i>
+                  <span
+                    class="text-[#2C1D11]/80 font-medium text-sm sm:text-base"
+                  >
+                    Informasi kondisi jaringan
+                  </span>
+                </li>
+
+                <li
+                  class="flex gap-3 sm:gap-4 items-center p-2 rounded-lg hover:bg-[#E0A96D]/30 transition-colors duration-200 group"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-[#D96B43] text-base sm:text-lg group-hover:scale-125 transition-transform duration-300 shrink-0"
+                  ></i>
+                  <span
+                    class="text-[#2C1D11]/80 font-medium text-sm sm:text-base"
+                  >
+                    Riwayat distribusi arus
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================================= -->
+
+    <footer class="border-t border-retro-espresso/10 py-6 sm:py-8 bg-retro-mustard/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <p class="text-retro-espresso/60 text-xs sm:text-sm font-medium leading-relaxed">
+          &copy; 2026 Muhammad Abdurrahman Hafizh. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
