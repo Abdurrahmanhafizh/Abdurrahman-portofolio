@@ -375,7 +375,7 @@ html, body {
   background: #e0a96d;
   box-shadow: 4px 4px 0px #2c1d11;
   transition: 0.3s;
-  height: 208px;
+  min-height: 120px;
 }
 .stat-card:hover {
   transform: translateY(-5px);
