@@ -375,7 +375,8 @@ html, body {
   background: #e0a96d;
   box-shadow: 4px 4px 0px #2c1d11;
   transition: 0.3s;
-  min-height: 120px;
+  height: 208px;
+  
 }
 .stat-card:hover {
   transform: translateY(-5px);
@@ -394,7 +395,8 @@ html, body {
 .stat-card p {
   color: #a34828;
   font-weight: 600;
-} /* =========================================================TABS========================================================= */
+} 
+/* =========================================================TABS========================================================= */
 .tab-button {
   padding: 11px 22px;
   color: #2c1d11;
