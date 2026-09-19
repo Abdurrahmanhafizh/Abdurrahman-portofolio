@@ -285,7 +285,7 @@ body {
 .section-heading h2 span {
   color: #d96b43;
   letter-spacing: normal;
-} 
+}
 /* =========================================================ABOUT  /* =========================================================
 /* ========================================================= PHOTO ========================================================= */
 .photo-wrapper {
@@ -326,6 +326,10 @@ body {
 
 /* Penyesuaian Responsif untuk Tampilan HP/Tablet */
 @media (max-width: 1024px) {
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
   .photo-wrapper {
     width: 280px;
     height: 280px;
@@ -614,14 +618,15 @@ body {
   opacity: 0 !important;
   /* Menggunakan translate3d untuk memaksa GPU (Hardware Acceleration) memproses animasi */
   transform: translate3d(60px, 0, 0) !important;
-  
+
   /* 
      - Durasi: 1.6s (lebih lambat agar gerakan tidak mendadak)
      - Easing: cubic-bezier(0.22, 1, 0.36, 1) memberikan efek pengereman yang sangat halus di akhir (smooth deceleration)
   */
-  transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) !important;
-  
+  transition:
+    opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) !important;
+
   /* Memberi tahu browser untuk mempersiapkan komposisi layer sebelum animasi berjalan */
   will-change: opacity, transform;
   backface-visibility: hidden;
